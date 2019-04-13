@@ -1,6 +1,6 @@
 <?php
 
-namespace PragmaRX\Version\Package\Support;
+namespace SyntaxEvolution\Version\Package\Support;
 
 class Constants
 {

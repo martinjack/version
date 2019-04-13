@@ -1,16 +1,16 @@
 <?php
 
-namespace PragmaRX\Version\Package\Support;
+namespace SyntaxEvolution\Version\Package\Support;
 
 use Illuminate\Support\Collection;
-use PragmaRX\Yaml\Package\Yaml;
+use SyntaxEvolution\Yaml\Package\Yaml;
 
 class Config
 {
     /**
      * The config loader.
      *
-     * @var \PragmaRX\Yaml\Package\Yaml
+     * @var \SyntaxEvolution\Yaml\Package\Yaml
      */
     protected $yaml;
 

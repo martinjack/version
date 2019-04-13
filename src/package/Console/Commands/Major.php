@@ -1,6 +1,6 @@
 <?php
 
-namespace PragmaRX\Version\Package\Console\Commands;
+namespace SyntaxEvolution\Version\Package\Console\Commands;
 
 class Major extends Base
 {
@@ -24,7 +24,7 @@ class Major extends Base
     public function handle()
     {
         if ($this->checkIfCanIncrement('current')) {
-            $number = app('pragmarx.version')->incrementMajor();
+            $number = app('syntaxevolution.version')->incrementMajor();
 
             $this->info("New major version: {$number}");
 

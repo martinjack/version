@@ -1,6 +1,6 @@
 <?php
 
-namespace PragmaRX\Version\Package\Console\Commands;
+namespace SyntaxEvolution\Version\Package\Console\Commands;
 
 class Build extends Base
 {
@@ -24,7 +24,7 @@ class Build extends Base
     public function handle()
     {
         if ($this->checkIfCanIncrement('current')) {
-            $build = app('pragmarx.version')->incrementBuild(
+            $build = app('syntaxevolution.version')->incrementBuild(
                 $this->option('increment-by')
             );
 

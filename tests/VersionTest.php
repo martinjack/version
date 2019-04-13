@@ -1,14 +1,14 @@
 <?php
 
-namespace PragmaRX\Version\Tests;
+namespace SyntaxEvolution\Version\Tests;
 
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Cache;
-use PragmaRX\Version\Package\Exceptions\GitTagNotFound;
-use PragmaRX\Version\Package\Exceptions\MethodNotFound;
-use PragmaRX\Version\Package\Facade as VersionFacade;
-use PragmaRX\Version\Package\Version as VersionService;
+use SyntaxEvolution\Version\Package\Exceptions\GitTagNotFound;
+use SyntaxEvolution\Version\Package\Exceptions\MethodNotFound;
+use SyntaxEvolution\Version\Package\Facade as VersionFacade;
+use SyntaxEvolution\Version\Package\Version as VersionService;
 
 class VersionTest extends TestCase
 {
@@ -214,7 +214,7 @@ class VersionTest extends TestCase
     {
         $this->assertEquals(
             "version 1.0.0 (build {$this->build})",
-            app('pragmarx.version')->format('full')
+            app('syntaxevolution.version')->format('full')
         );
     }
 

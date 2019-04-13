@@ -1,20 +1,20 @@
 <?php
 
-namespace PragmaRX\Version\Package;
+namespace SyntaxEvolution\Version\Package;
 
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider as IlluminateServiceProvider;
-use PragmaRX\Version\Package\Console\Commands\Absorb;
-use PragmaRX\Version\Package\Console\Commands\Build;
-use PragmaRX\Version\Package\Console\Commands\Major;
-use PragmaRX\Version\Package\Console\Commands\Minor;
-use PragmaRX\Version\Package\Console\Commands\Patch;
-use PragmaRX\Version\Package\Console\Commands\Refresh;
-use PragmaRX\Version\Package\Console\Commands\Show;
-use PragmaRX\Version\Package\Console\Commands\Version as VersionCommand;
-use PragmaRX\Version\Package\Support\Config;
-use PragmaRX\Version\Package\Support\Constants;
-use PragmaRX\Yaml\Package\Yaml;
+use SyntaxEvolution\Version\Package\Console\Commands\Absorb;
+use SyntaxEvolution\Version\Package\Console\Commands\Build;
+use SyntaxEvolution\Version\Package\Console\Commands\Major;
+use SyntaxEvolution\Version\Package\Console\Commands\Minor;
+use SyntaxEvolution\Version\Package\Console\Commands\Patch;
+use SyntaxEvolution\Version\Package\Console\Commands\Refresh;
+use SyntaxEvolution\Version\Package\Console\Commands\Show;
+use SyntaxEvolution\Version\Package\Console\Commands\Version as VersionCommand;
+use SyntaxEvolution\Version\Package\Support\Config;
+use SyntaxEvolution\Version\Package\Support\Constants;
+use SyntaxEvolution\Yaml\Package\Yaml;
 
 class ServiceProvider extends IlluminateServiceProvider
 {
@@ -38,21 +38,21 @@ class ServiceProvider extends IlluminateServiceProvider
      * @var array
      */
     protected $commandList = [
-        'pragmarx.version.command' => VersionCommand::class,
+        'syntaxevolution.version.command' => VersionCommand::class,
 
-        'pragmarx.version.build.command' => Build::class,
+        'syntaxevolution.version.build.command' => Build::class,
 
-        'pragmarx.version.show.command' => Show::class,
+        'syntaxevolution.version.show.command' => Show::class,
 
-        'pragmarx.version.major.command' => Major::class,
+        'syntaxevolution.version.major.command' => Major::class,
 
-        'pragmarx.version.minor.command' => Minor::class,
+        'syntaxevolution.version.minor.command' => Minor::class,
 
-        'pragmarx.version.patch.command' => Patch::class,
+        'syntaxevolution.version.patch.command' => Patch::class,
 
-        'pragmarx.version.refresh.command' => Refresh::class,
+        'syntaxevolution.version.refresh.command' => Refresh::class,
 
-        'pragmarx.version.absorb.command' => Absorb::class,
+        'syntaxevolution.version.absorb.command' => Absorb::class,
     ];
 
     /**
@@ -129,7 +129,7 @@ class ServiceProvider extends IlluminateServiceProvider
         Blade::directive(
             $this->config->get('blade_directive', 'version'),
             function ($format = Constants::DEFAULT_FORMAT) {
-                return "<?php echo app('pragmarx.version')->format($format); ?>";
+                return "<?php echo app('syntaxevolution.version')->format($format); ?>";
             }
         );
     }
@@ -164,7 +164,7 @@ class ServiceProvider extends IlluminateServiceProvider
      */
     protected function registerService()
     {
-        $this->app->singleton('pragmarx.version', function () {
+        $this->app->singleton('syntaxevolution.version', function () {
             $version = new Version($this->config);
 
             $version->setConfigFileStub($this->getConfigFileStub());

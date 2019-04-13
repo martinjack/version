@@ -1,6 +1,6 @@
 <?php
 
-namespace PragmaRX\Version\Package\Console\Commands;
+namespace SyntaxEvolution\Version\Package\Console\Commands;
 
 class Patch extends Base
 {
@@ -24,7 +24,7 @@ class Patch extends Base
     public function handle()
     {
         if ($this->checkIfCanIncrement('current')) {
-            $number = app('pragmarx.version')->incrementPatch();
+            $number = app('syntaxevolution.version')->incrementPatch();
 
             $this->info("New patch: {$number}");
 

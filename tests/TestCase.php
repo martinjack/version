@@ -1,10 +1,10 @@
 <?php
 
-namespace PragmaRX\Version\Tests;
+namespace SyntaxEvolution\Version\Tests;
 
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
-use PragmaRX\Version\Package\ServiceProvider as VersionServiceProvider;
-use PragmaRX\Yaml\Package\ServiceProvider as YamlServiceProvider;
+use SyntaxEvolution\Version\Package\ServiceProvider as VersionServiceProvider;
+use SyntaxEvolution\Yaml\Package\ServiceProvider as YamlServiceProvider;
 
 abstract class TestCase extends OrchestraTestCase
 {

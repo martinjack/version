@@ -1,6 +1,6 @@
 <?php
 
-namespace PragmaRX\Version\Package\Exceptions;
+namespace SyntaxEvolution\Version\Package\Exceptions;
 
 class MethodNotFound extends \Exception
 {

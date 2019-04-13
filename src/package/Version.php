@@ -1,40 +1,40 @@
 <?php
 
-namespace PragmaRX\Version\Package;
+namespace SyntaxEvolution\Version\Package;
 
-use PragmaRX\Version\Package\Exceptions\MethodNotFound;
-use PragmaRX\Version\Package\Support\Absorb;
-use PragmaRX\Version\Package\Support\Cache;
-use PragmaRX\Version\Package\Support\Config;
-use PragmaRX\Version\Package\Support\Constants;
-use PragmaRX\Version\Package\Support\Git;
-use PragmaRX\Version\Package\Support\Increment;
-use PragmaRX\Yaml\Package\Yaml;
+use SyntaxEvolution\Version\Package\Exceptions\MethodNotFound;
+use SyntaxEvolution\Version\Package\Support\Absorb;
+use SyntaxEvolution\Version\Package\Support\Cache;
+use SyntaxEvolution\Version\Package\Support\Config;
+use SyntaxEvolution\Version\Package\Support\Constants;
+use SyntaxEvolution\Version\Package\Support\Git;
+use SyntaxEvolution\Version\Package\Support\Increment;
+use SyntaxEvolution\Yaml\Package\Yaml;
 
 class Version
 {
     /**
-     * @var \PragmaRX\Yaml\Package\Yaml
+     * @var \SyntaxEvolution\Yaml\Package\Yaml
      */
     protected $yaml;
 
     /**
-     * @var \PragmaRX\Version\Package\Support\Cache
+     * @var \SyntaxEvolution\Version\Package\Support\Cache
      */
     protected $cache;
 
     /**
-     * @var \PragmaRX\Version\Package\Support\Config
+     * @var \SyntaxEvolution\Version\Package\Support\Config
      */
     protected $config;
 
     /**
-     * @var \PragmaRX\Version\Package\Support\Git
+     * @var \SyntaxEvolution\Version\Package\Support\Git
      */
     protected $git;
 
     /**
-     * @var \PragmaRX\Version\Package\Support\Increment
+     * @var \SyntaxEvolution\Version\Package\Support\Increment
      */
     protected $increment;
 
@@ -124,7 +124,7 @@ class Version
         $yaml,
         $absorb
     ) {
-        $yaml = $this->instantiateClass($yaml ?: app('pragmarx.yaml'), 'yaml');
+        $yaml = $this->instantiateClass($yaml ?: app('syntaxevolution.yaml'), 'yaml');
 
         $config = $this->instantiateClass($config, 'config', Config::class, [
             $yaml,

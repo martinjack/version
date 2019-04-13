@@ -1,6 +1,6 @@
 <?php
 
-namespace PragmaRX\Version\Package\Console\Commands;
+namespace SyntaxEvolution\Version\Package\Console\Commands;
 
 class Absorb extends Base
 {
@@ -30,7 +30,7 @@ class Absorb extends Base
         }
 
         try {
-            app('pragmarx.version')->absorb($this->option('force'));
+            app('syntaxevolution.version')->absorb($this->option('force'));
 
             $this->info('Version was absorbed.');
         } catch (\Exception $exception) {
@@ -49,7 +49,7 @@ class Absorb extends Base
      */
     protected function isInAbsorbMode(): bool
     {
-        return app('pragmarx.version')->isInAbsorbMode('current') ||
-            app('pragmarx.version')->isInAbsorbMode('build');
+        return app('syntaxevolution.version')->isInAbsorbMode('current') ||
+            app('syntaxevolution.version')->isInAbsorbMode('build');
     }
 }

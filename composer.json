@@ -1,5 +1,5 @@
 {
-    "name": "pragmarx/version",
+    "name": "syntaxevolution/version",
     "description": "Take control over your Laravel app version",
     "keywords": [
         "laravel",
@@ -9,15 +9,15 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Antonio Carlos Ribeiro",
-            "email": "acr@antoniocarlosribeiro.com",
-            "role": "Creator & Designer"
+            "name": "Topher Lazarz",
+            "email": "topher@meanservers.com",
+            "role": "Forker and Contributor"
         }
     ],
     "require": {
         "php": "^7.0",
         "laravel/framework": ">=5.5.33",
-        "pragmarx/yaml": "^0.1",
+        "syntaxevolution/yaml": "^0.1",
         "symfony/process": "^3.3|^4.0"
     },
     "require-dev": {
@@ -26,18 +26,18 @@
     },
     "autoload": {
         "psr-4": {
-            "PragmaRX\\Version\\Package\\": "src/package",
-            "PragmaRX\\Version\\Tests\\": "tests/"
+            "SyntaxEvolution\\Version\\Package\\": "src/package",
+            "SyntaxEvolution\\Version\\Tests\\": "tests/"
         }
     },
     "extra": {
         "component": "package",
         "laravel": {
             "providers": [
-                "PragmaRX\\Version\\Package\\ServiceProvider"
+                "SyntaxEvolution\\Version\\Package\\ServiceProvider"
             ],
             "aliases": {
-                "Version": "PragmaRX\\Version\\Package\\Facade"
+                "Version": "SyntaxEvolution\\Version\\Package\\Facade"
             }
         }
     },

@@ -1,6 +1,6 @@
 <?php
 
-namespace PragmaRX\Version\Package\Console\Commands;
+namespace SyntaxEvolution\Version\Package\Console\Commands;
 
 use Illuminate\Console\Command;
 
@@ -14,7 +14,7 @@ class Base extends Command
     public function displayAppVersion($format = 'full')
     {
         $this->info(
-            config('app.name').' '.app('pragmarx.version')->format($format)
+            config('app.name').' '.app('syntaxevolution.version')->format($format)
         );
     }
 
@@ -27,7 +27,7 @@ class Base extends Command
      */
     public function checkIfCanIncrement($type)
     {
-        if (app('pragmarx.version')->isInAbsorbMode($type)) {
+        if (app('syntaxevolution.version')->isInAbsorbMode($type)) {
             $this->error(
                 'Version is in git absorb mode, cannot be incremented'
             );

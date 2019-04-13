@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-    <a href="https://packagist.org/packages/pragmarx/version"><img alt="Latest Stable Version" src="https://img.shields.io/packagist/v/pragmarx/version.svg?style=flat-square"></a>
+    <a href="https://packagist.org/packages/syntaxevolution/version"><img alt="Latest Stable Version" src="https://img.shields.io/packagist/v/syntaxevolution/version.svg?style=flat-square"></a>
     <a href="/antonioribeiro/version/blob/master/LICENSE.md"><img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square"></a>
     <a href="https://scrutinizer-version.com/g/antonioribeiro/version/?branch=master"><img alt="Code Quality" src="https://img.shields.io/scrutinizer/g/antonioribeiro/version.svg?style=flat-square"></a>
     <a href="https://scrutinizer-version.com/g/antonioribeiro/version/?branch=master"><img alt="Build" src="https://img.shields.io/scrutinizer/build/g/antonioribeiro/version.svg?style=flat-square"></a>
@@ -176,7 +176,7 @@ The best ways to instantiate it are:
 A simple PHP object instantiation:
 
 ``` php
-$version = new \PragmaRX\Version\Package\Version();
+$version = new \SyntaxEvolution\Version\Package\Version();
 
 dd(
     $version->format()
@@ -187,7 +187,7 @@ Or to get an already instantiated Version object from the container:
 
 ``` php
 dd(
-    app(\PragmaRX\Version\Package\Version::class)->format()
+    app(\SyntaxEvolution\Version\Package\Version::class)->format()
 );
 ```
 
@@ -278,7 +278,7 @@ Here's a community example on how to send the app version number when logging an
 
 namespace App\Exceptions;
 
-use PragmaRX\Version\Package\Version;
+use SyntaxEvolution\Version\Package\Version;
 use Bugsnag\BugsnagLaravel\Facades\Bugsnag;
 
 class Handler extends ExceptionHandler
@@ -303,10 +303,10 @@ Show the current app version:
 
 ``` text
 $ php artisan version:show
-PragmaRX version 1.0.0 (build 701031)
+SyntaxEvolution version 1.0.0 (build 701031)
 
 $ php artisan version:show --format=compact
-PragmaRX v1.0.0-701031
+SyntaxEvolution v1.0.0-701031
 
 $ php artisan version:show --format=compact --suppress-app-name
 v1.0.0-701031
@@ -329,7 +329,7 @@ Clear cache and refresh versions
 ``` text
 $ php artisan version:refresh
 Version was refreshed.
-PragmaRX version 1.0.0 (build 4f76c)
+SyntaxEvolution version 1.0.0 (build 4f76c)
 ```
 
 #### version:absorb
@@ -370,13 +370,13 @@ build:
 Via Composer
 
 ``` bash
-$ composer require pragmarx/version
+$ composer require syntaxevolution/version
 ```
 
 Then publish the configuration file you'll have to:
 
 ``` bash
-$ php artisan vendor:publish --provider="PragmaRX\Version\Package\ServiceProvider"
+$ php artisan vendor:publish --provider="SyntaxEvolution\Version\Package\ServiceProvider"
 ```
 
 And you should be good to use it in your views:
@@ -431,10 +431,6 @@ rm composer.lock
 composer install
 ```
 
-## Author
-
-[Antonio Carlos Ribeiro](http://twitter.com/iantonioribeiro)
-
 ## License
 
 This package is licensed under the MIT License - see the `LICENSE` file for details
@@ -444,4 +440,4 @@ This package is licensed under the MIT License - see the `LICENSE` file for deta
 Pull requests and issues are welcome.
 
 
-<!-- [![Downloads](https://img.shields.io/packagist/dt/pragmarx/version.svg?style=flat-square)](https://packagist.org/packages/pragmarx/version) --> 
+<!-- [![Downloads](https://img.shields.io/packagist/dt/syntaxevolution/version.svg?style=flat-square)](https://packagist.org/packages/syntaxevolution/version) --> 

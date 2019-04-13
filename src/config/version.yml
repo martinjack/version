@@ -8,7 +8,7 @@ current:
   git_absorb: false # "false", "git-local" or "git-remote"
 cache:
   enabled: true
-  key: pragmarx-version
+  key: syntaxevolution-version
   time: 525600 #minutes = 1 year
 build:
   mode: number # "number", "git-local" or "git-remote"

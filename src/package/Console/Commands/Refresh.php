@@ -1,6 +1,6 @@
 <?php
 
-namespace PragmaRX\Version\Package\Console\Commands;
+namespace SyntaxEvolution\Version\Package\Console\Commands;
 
 class Refresh extends Base
 {
@@ -23,7 +23,7 @@ class Refresh extends Base
      */
     public function handle()
     {
-        app('pragmarx.version')->refresh();
+        app('syntaxevolution.version')->refresh();
 
         $this->info('Version was refreshed.');
 

@@ -805,7 +805,7 @@
             "time": "2015-07-25T16:39:46+00:00"
         },
         {
-            "name": "pragmarx/yaml",
+            "name": "syntaxevolution/yaml",
             "version": "v0.1.7",
             "source": {
                 "type": "git",
@@ -832,17 +832,17 @@
                 "component": "package",
                 "laravel": {
                     "providers": [
-                        "PragmaRX\\Yaml\\Package\\ServiceProvider"
+                        "SyntaxEvolution\\Yaml\\Package\\ServiceProvider"
                     ],
                     "aliases": {
-                        "Yaml": "PragmaRX\\Yaml\\Package\\Facade"
+                        "Yaml": "SyntaxEvolution\\Yaml\\Package\\Facade"
                     }
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "PragmaRX\\Yaml\\Package\\": "src/package",
-                    "PragmaRX\\Yaml\\Tests\\": "tests/"
+                    "SyntaxEvolution\\Yaml\\Package\\": "src/package",
+                    "SyntaxEvolution\\Yaml\\Tests\\": "tests/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
