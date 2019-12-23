@@ -124,7 +124,7 @@ class Version
         $yaml,
         $absorb
     ) {
-        $yaml = $this->instantiateClass($yaml ?: app('syntaxevolution.yaml'), 'yaml');
+        $yaml = $this->instantiateClass($yaml ?: app('pragmarx.yaml'), 'yaml');
 
         $config = $this->instantiateClass($config, 'config', Config::class, [
             $yaml,

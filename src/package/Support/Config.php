@@ -10,7 +10,7 @@ class Config
     /**
      * The config loader.
      *
-     * @var \SyntaxEvolution\Yaml\Package\Yaml
+     * @var \PragmaRX\Yaml\Package\Yaml
      */
     protected $yaml;
 
