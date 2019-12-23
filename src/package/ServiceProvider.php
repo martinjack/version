@@ -14,7 +14,7 @@ use SyntaxEvolution\Version\Package\Console\Commands\Show;
 use SyntaxEvolution\Version\Package\Console\Commands\Version as VersionCommand;
 use SyntaxEvolution\Version\Package\Support\Config;
 use SyntaxEvolution\Version\Package\Support\Constants;
-use SyntaxEvolution\Yaml\Package\Yaml;
+use PragmaRX\Yaml\Package\Yaml;
 
 class ServiceProvider extends IlluminateServiceProvider
 {

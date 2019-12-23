@@ -9,7 +9,7 @@ use SyntaxEvolution\Version\Package\Support\Config;
 use SyntaxEvolution\Version\Package\Support\Constants;
 use SyntaxEvolution\Version\Package\Support\Git;
 use SyntaxEvolution\Version\Package\Support\Increment;
-use SyntaxEvolution\Yaml\Package\Yaml;
+use PragmaRX\Yaml\Package\Yaml;
 
 class Version
 {

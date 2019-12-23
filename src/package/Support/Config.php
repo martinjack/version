@@ -3,7 +3,7 @@
 namespace SyntaxEvolution\Version\Package\Support;
 
 use Illuminate\Support\Collection;
-use SyntaxEvolution\Yaml\Package\Yaml;
+use PragmaRX\Yaml\Package\Yaml;
 
 class Config
 {
