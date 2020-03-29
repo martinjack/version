@@ -229,7 +229,9 @@ class Git
      */
     protected function shell($command)
     {
-        $process = new Process(array($command), $this->getBasePath());
+        //$process = new Process(array($command), $this->getBasePath());
+
+        $process = Process::fromShellCommandline($command, $this->getBasePath());
 
         $process->run();
 
