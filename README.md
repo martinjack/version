@@ -370,7 +370,7 @@ build:
 Via Composer
 
 ``` bash
-$ composer require t/version
+$ composer require jackmartin/version
 ```
 
 Then publish the configuration file you'll have to:
